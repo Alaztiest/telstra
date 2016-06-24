@@ -35,7 +35,6 @@ import org.testng.Reporter;
 
 import com.google.common.base.Function;
 import com.perfecto.splunk.ReportingCollectorFactory;
-import com.perfecto.splunk.ReportingManager;
 
 public class library {
 

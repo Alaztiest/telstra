@@ -23,7 +23,6 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.perfecto.splunk.ReportingCollectorFactory;
 import com.perfecto.splunk.ReportingFactory;
-import com.perfecto.splunk.ReportingManager;
 import com.perfecto.splunk.SplunkReporting;
 import com.perfecto.splunk.SplunkReportingCollector;
 
