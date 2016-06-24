@@ -40,7 +40,7 @@ public class PlayStoreTestSystem extends ClassHelper {
 
 	
 	@Test
-	public void Login() {
+	public void Login() throws Exception {
 		try {
 			setPagesAndHelpers(lib);
 			Map<String, Object> params1 = new HashMap<>();
@@ -110,6 +110,7 @@ public class PlayStoreTestSystem extends ClassHelper {
 			
 		} catch (Exception ex) {
 			ex.printStackTrace();
+			throw ex;
 			
 
 		}
