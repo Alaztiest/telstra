@@ -71,12 +71,26 @@ public class PlayStoreTestSystem extends ClassHelper {
 //			//params8.put("content", "this should fail");
 //			params8.put("timeout", "60");
 //			Object result8 = lib.getDriver().executeScript("mobile:checkpoint:text", params8);
-			lib.addStep("trans_1", "Login", lib.getUXTimer());
+
 //			
 			lib.clickElement(byFields.xpath, lib.getProp(prop.PSListApps), 10);
 //
+			
+			Map<String, Object> params12 = new HashMap<>();
+			params12.put("content", "Install");
+			params12.put("timeout", "60");
+			Object result12 = lib.getDriver().executeScript("mobile:checkpoint:text", params12);
+			lib.addStep("trans_1", "App Search", lib.getUXTimer());
+			
+			
 			lib.clickElement(byFields.xpath, lib.getProp(prop.PSclickInstall), 10);
-			lib.sleep(40000);  // wait (1 sec = 10000)
+			Map<String, Object> params11 = new HashMap<>();
+			params11.put("content", "Uninstall");
+			params11.put("timeout", "420");
+			Object result11 = lib.getDriver().executeScript("mobile:checkpoint:text", params11);
+			lib.addStep("trans_2", "Download", lib.getUXTimer());
+			
+			//lib.sleep(40000);  // wait (1 sec = 10000)
 			lib.clickElement(byFields.xpath, lib.getProp(prop.PSlaunchBtn), 10);
 //			lib.clickElement(byFields.xpath, lib.getProp(prop.WFConfirmSignOff), 10);
 			
@@ -84,7 +98,7 @@ public class PlayStoreTestSystem extends ClassHelper {
 			params10.put("content", "Aggree and continue");
 			params10.put("timeout", "40");
 			Object result10 = lib.getDriver().executeScript("mobile:checkpoint:text", params10);
-			lib.addStep("trans_2", "Available balance", lib.getUXTimer());
+//			lib.addStep("trans_2", "Available balance", lib.getUXTimer());
 			
 
 
@@ -93,7 +107,7 @@ public class PlayStoreTestSystem extends ClassHelper {
 			//params15.put("content", "this should fail");
 			params15.put("timeout", "50");
 			Object result15 = lib.getDriver().executeScript("mobile:checkpoint:text", params15);
-			lib.addStep("trans_3", "Sign Out", lib.getUXTimer());
+			lib.addStep("trans_3", "App Launched", lib.getUXTimer());
 			
 			try {
 				lib.closeApplication("com.android.vending");
