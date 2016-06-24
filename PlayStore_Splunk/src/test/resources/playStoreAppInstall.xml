@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" verbose="1" configfailurepolicy="skip" thread-count="2" parallel="tests" >
+ <listeners>
+	  <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+       <listener class-name="utilities.TestListener" />
+  </listeners>
+      
+ <test name="Galaxy S6 Pair-1">
+  <parameter name="targetEnvironment" value="Galaxy S6" />
+  <parameter name="network" value="WIFI" />
+  <parameter name="networkLatency" value="" />
+    <classes>
+      <class name="TelstraTesting.PlayStoreTestSystem"/>
+    </classes>
+  </test>
+  
+  <test name="Galaxy S7 Pair-2">
+  <parameter name="targetEnvironment" value="Galaxy S7" />
+  <parameter name="network" value="WIFI" />
+  <parameter name="networkLatency" value="" />
+    <classes>
+      <class name="TelstraTesting.PlayStoreTestSystem"/>
+    </classes>
+  </test>
+</suite> <!-- Suite -->
