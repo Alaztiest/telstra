@@ -42,10 +42,22 @@ public class PlayStoreTestSystem extends ClassHelper {
 	@Test
 	public void Login() throws Exception {
 		try {
+			
 			setPagesAndHelpers(lib);
 			Map<String, Object> params1 = new HashMap<>();
         	Object result1 = lib.getDriver().executeScript("mobile:handset:ready", params1);
-			
+        	try {
+        		lib.closeApplication("Google Play Store");
+        		
+        		Map<String, Object> params16 = new HashMap<>();
+    			params16.put("name", "WhatsApp");
+    			Object result16 =lib.getDriver().executeScript("mobile:application:uninstall", params16);
+    			System.out.println("---------- App Uninstalled +++");
+    		} catch (Exception ex) {
+    			// TODO Auto-generated catch block
+    			ex.printStackTrace();
+    			System.out.println("----------Error App Uninstall+++");	
+    		}
 			
 			lib.closeApplication("com.android.vending");
 			//lib.goToPage("https://play.google.com/store/apps/details?id=com.whatsapp&hl=en");
