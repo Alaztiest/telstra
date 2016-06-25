@@ -99,10 +99,13 @@ public class PlayStoreTestSystem extends ClassHelper {
 			Map<String, Object> params11 = new HashMap<>();
 			params11.put("content", "Uninstall");
 			params11.put("timeout", "420");
+			params11.put("threshold", "95");
+			params11.put("measurement", "accurate");
 			Object result11 = lib.getDriver().executeScript("mobile:checkpoint:text", params11);
 			lib.addStep("trans_2", "Download", lib.getUXTimer());
 			
-			//lib.sleep(40000);  // wait (1 sec = 10000)
+			
+//			lib.sleep(40000);  // wait (1 sec = 10000)
 			lib.clickElement(byFields.xpath, lib.getProp(prop.PSlaunchBtn), 10);
 			//lib.clickElement(byFields.xpath, lib.getProp(prop.PSlaunchBtn), 10);
 //			lib.clickElement(byFields.xpath, lib.getProp(prop.WFConfirmSignOff), 10);
@@ -112,8 +115,6 @@ public class PlayStoreTestSystem extends ClassHelper {
 			params10.put("timeout", "40");
 			Object result10 = lib.getDriver().executeScript("mobile:checkpoint:text", params10);
 //			lib.addStep("trans_2", "Available balance", lib.getUXTimer());
-			
-
 
 			Map<String, Object> params15 = new HashMap<>();
 			params15.put("content", "Welcome to WhatsApp");
