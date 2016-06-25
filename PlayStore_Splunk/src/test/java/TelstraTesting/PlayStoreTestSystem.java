@@ -104,6 +104,7 @@ public class PlayStoreTestSystem extends ClassHelper {
 			
 			//lib.sleep(40000);  // wait (1 sec = 10000)
 			lib.clickElement(byFields.xpath, lib.getProp(prop.PSlaunchBtn), 10);
+			//lib.clickElement(byFields.xpath, lib.getProp(prop.PSlaunchBtn), 10);
 //			lib.clickElement(byFields.xpath, lib.getProp(prop.WFConfirmSignOff), 10);
 			
 			Map<String, Object> params10 = new HashMap<>();

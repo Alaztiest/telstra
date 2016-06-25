@@ -111,7 +111,7 @@ public class AppStoreTestSystem extends ClassHelper {
 			params13.put("content", "Agree & Continue");
 			params13.put("timeout", "60");
 			Object result13 = lib.getDriver().executeScript("mobile:checkpoint:text", params13);
-			lib.addStep("trans_3", "App Search", lib.getUXTimer());
+			lib.addStep("trans_3", "App Launched", lib.getUXTimer());
 			
 			System.out.println("----------Application Launched +++");
 			
