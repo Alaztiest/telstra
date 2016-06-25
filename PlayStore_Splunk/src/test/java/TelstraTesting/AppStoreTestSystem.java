@@ -55,7 +55,7 @@ public class AppStoreTestSystem extends ClassHelper {
         		lib.closeApplication("App Store");
         		
         		Map<String, Object> params16 = new HashMap<>();
-    			params16.put("name", "Telstra 24x7");
+    			params16.put("name", "WhatsApp");
     			Object result16 =lib.getDriver().executeScript("mobile:application:uninstall", params16);
     			System.out.println("---------- App Uninstalled +++");
     		} catch (Exception ex) {
@@ -66,7 +66,13 @@ public class AppStoreTestSystem extends ClassHelper {
         	
         	
         	// launch appstore 
-        	lib.goToPage("https://itunes.apple.com/us/app/telstra-24x7-for-iphone/id543829966?mt=8");
+        	lib.goToPage("https://itunes.apple.com/us/app/whatsapp-messenger/id310633997?mt=8");
+        	
+			Map<String, Object> params12 = new HashMap<>();
+			params12.put("content", "whatsapp");
+			params12.put("timeout", "60");
+			Object result12 = lib.getDriver().executeScript("mobile:checkpoint:text", params12);
+			lib.addStep("trans_1", "App Search", lib.getUXTimer());
         	
         	lib.switchToContext(availableContexts.NATIVE_APP);   // Switch to NATIVE
         	
@@ -88,25 +94,33 @@ public class AppStoreTestSystem extends ClassHelper {
 			
 			//appDownload
 			lib.clickElement(byFields.xpath, lib.getProp(prop.appDownload), 60);
-			lib.addStep("trans_1", "Login", lib.getUXTimer());
-			lib.sleep(70000);  // wait (1 sec = 10000)
+			
+			Map<String, Object> params11 = new HashMap<>();
+			params11.put("content", "Open");
+			params11.put("timeout", "420");
+			Object result11 = lib.getDriver().executeScript("mobile:checkpoint:text", params11);
+			lib.addStep("trans_2", "Download", lib.getUXTimer());
+			System.out.println("----------Open btn displayed +++");
+//			lib.sleep(70000);  // wait (1 sec = 10000)
 			
 			//open verify: 
 			//lib.clickElement(byFields.xpath, lib.getProp(prop.appOpen), 10);
+			//Uncommented by Vahan - We are using visual checkpoint to validate if the download was complete
+			//Visual validation from line 92-96
 			WebElement openBtn = lib.waitForElement(120, byFields.xpath, lib.getProp(prop.appSearchClear));
 			System.out.println("----------Open btn displayed +++");
-			lib.addStep("trans_1", "Login", lib.getUXTimer());
+//			lib.addStep("trans_1", "Login", lib.getUXTimer());
 			
 			
 //			lib.clickElement(byFields.xpath, lib.getProp(prop.appClearText), 5);
 
 			// verify right page displayed
-			Map<String, Object> params15 = new HashMap<>();
-			params15.put("content", "Telstra Corpration Ltd");
-			//params15.put("content", "this should fail");
-			params15.put("timeout", "50");
-			Object result15 = lib.getDriver().executeScript("mobile:checkpoint:text", params15);
-			lib.addStep("trans_3", "Sign Out", lib.getUXTimer());
+//			Map<String, Object> params15 = new HashMap<>();
+//			params15.put("content", "Telstra Corpration Ltd");
+//			//params15.put("content", "this should fail");
+//			params15.put("timeout", "50");
+//			Object result15 = lib.getDriver().executeScript("mobile:checkpoint:text", params15);
+//			lib.addStep("trans_3", "Sign Out", lib.getUXTimer());
 			
 			// Back to search
 			lib.clickElement(byFields.xpath, lib.getProp(prop.appSearchClear), 10);

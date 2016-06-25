@@ -57,7 +57,7 @@ public class PlayStoreTestSystem extends ClassHelper {
         	
 //			lib.goToPage("https://play.google.com/store/apps/details?id=com.whatsapp&hl=en");
 //
-		lib.clickElement(byFields.xpath, lib.getProp(prop.PSclickSearch), 10);
+        	lib.clickElement(byFields.xpath, lib.getProp(prop.PSclickSearch), 10);
 //			
 			lib.setText(byFields.xpath, lib.getProp(prop.PSreadyText), "whatsapp", true, 10);
 //			
