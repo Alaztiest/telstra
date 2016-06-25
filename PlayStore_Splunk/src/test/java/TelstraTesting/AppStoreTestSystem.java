@@ -104,13 +104,16 @@ public class AppStoreTestSystem extends ClassHelper {
 //			lib.sleep(70000);  // wait (1 sec = 10000)
 			
 			//open verify: 
-			//lib.clickElement(byFields.xpath, lib.getProp(prop.appOpen), 10);
+			lib.clickElement(byFields.xpath, lib.getProp(prop.appOpen), 10);
 			//Uncommented by Vahan - We are using visual checkpoint to validate if the download was complete
-			//Visual validation from line 92-96
-			WebElement openBtn = lib.waitForElement(120, byFields.xpath, lib.getProp(prop.appSearchClear));
-			System.out.println("----------Open btn displayed +++");
-//			lib.addStep("trans_1", "Login", lib.getUXTimer());
+//			WebElement openBtn = lib.waitForElement(120, byFields.xpath, lib.getProp(prop.appSearchClear));
+			Map<String, Object> params13 = new HashMap<>();
+			params13.put("content", "Agree & Continue");
+			params13.put("timeout", "60");
+			Object result13 = lib.getDriver().executeScript("mobile:checkpoint:text", params13);
+			lib.addStep("trans_3", "App Search", lib.getUXTimer());
 			
+			System.out.println("----------Application Launched +++");
 			
 //			lib.clickElement(byFields.xpath, lib.getProp(prop.appClearText), 5);
 
@@ -123,7 +126,7 @@ public class AppStoreTestSystem extends ClassHelper {
 //			lib.addStep("trans_3", "Sign Out", lib.getUXTimer());
 			
 			// Back to search
-			lib.clickElement(byFields.xpath, lib.getProp(prop.appSearchClear), 10);
+//			lib.clickElement(byFields.xpath, lib.getProp(prop.appSearchClear), 10);
 			// uninstall Telstra
 			try {
 				//lib.switchToContext(availableContexts.NATIVE_APP);   // Switch to NATIVE
