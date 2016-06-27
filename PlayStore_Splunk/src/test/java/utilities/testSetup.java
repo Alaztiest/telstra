@@ -199,7 +199,7 @@ public class testSetup {
 		if (device) {
 			capabilities.setCapability("windTunnelPersona", "empty");
 			capabilities.setCapability("outputVisibility", "public");	
-			capabilities.setCapability("scriptName", "JeremyTest");	
+			capabilities.setCapability("scriptName", "TelstraMonitoring");	
 			host = "demo.perfectomobile.com";
 			
 			String user = URLEncoder.encode("vahanm@perfectomobile.com", "UTF-8");
