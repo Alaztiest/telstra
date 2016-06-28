@@ -46,11 +46,7 @@ public class AppStoreTestSystem extends ClassHelper {
 			setPagesAndHelpers(lib);
 			Map<String, Object> params1 = new HashMap<>();
         	Object result1 = lib.getDriver().executeScript("mobile:handset:ready", params1);
-//			Map<String, Object> params17 = new HashMap<>();
-//			params17.put("property", "os");
-//			String result17 = (String)lib.getDriver().executeScript("mobile:handset:info", params17);
-//			
-			
+		
         	try {
         		lib.closeApplication("App Store");
         		
@@ -64,7 +60,6 @@ public class AppStoreTestSystem extends ClassHelper {
     			System.out.println("----------Error App Uninstall+++");	
     		}
         	
-        	
         	// launch appstore 
         	lib.goToPage("https://itunes.apple.com/us/app/whatsapp-messenger/id310633997?mt=8");
         	
@@ -75,23 +70,7 @@ public class AppStoreTestSystem extends ClassHelper {
 			lib.addStep("trans_1", "App Search", lib.getUXTimer());
         	
         	lib.switchToContext(availableContexts.NATIVE_APP);   // Switch to NATIVE
-        	
-        	//lib.clickElement(byFields.xpath, lib.getProp(prop.AppStartSearch), 10);  // Click Search
-        	
-//        	try {
-//        		lib.clickElement(byFields.xpath, lib.getProp(prop.appClearText), 5);
-//    		} catch (Exception ex) {
-//    			// TODO Auto-generated catch block
-//    			ex.printStackTrace();
-//    			System.out.println("----------last run in middle +++");	
-//    		}
-//        	lib.setText(byFields.xpath, lib.getProp(prop.AppSearch), "?", true, 5);
-//        	lib.clickElement(byFields.xpath, lib.getProp(prop.appSearchClear), 5);
-        	
-        	// search for "telstra"
-//			lib.setText(byFields.xpath, lib.getProp(prop.AppSearch), "telstra", true, 10);
-//			lib.clickElement(byFields.xpath, lib.getProp(prop.AppListPick), 15);
-			
+        				
 			//appDownload
 			lib.clickElement(byFields.xpath, lib.getProp(prop.appDownload), 60);
 			
@@ -101,12 +80,10 @@ public class AppStoreTestSystem extends ClassHelper {
 			Object result11 = lib.getDriver().executeScript("mobile:checkpoint:text", params11);
 			lib.addStep("trans_2", "Download", lib.getUXTimer());
 			System.out.println("----------Open btn displayed +++");
-//			lib.sleep(70000);  // wait (1 sec = 10000)
 			
 			//open verify: 
 			lib.clickElement(byFields.xpath, lib.getProp(prop.appOpen), 10);
-			//Uncommented by Vahan - We are using visual checkpoint to validate if the download was complete
-//			WebElement openBtn = lib.waitForElement(120, byFields.xpath, lib.getProp(prop.appSearchClear));
+
 			Map<String, Object> params13 = new HashMap<>();
 			params13.put("content", "Agree & Continue");
 			params13.put("timeout", "60");
@@ -114,19 +91,7 @@ public class AppStoreTestSystem extends ClassHelper {
 			lib.addStep("trans_3", "App Launched", lib.getUXTimer());
 			
 			System.out.println("----------Application Launched +++");
-			
-//			lib.clickElement(byFields.xpath, lib.getProp(prop.appClearText), 5);
 
-			// verify right page displayed
-//			Map<String, Object> params15 = new HashMap<>();
-//			params15.put("content", "Telstra Corpration Ltd");
-//			//params15.put("content", "this should fail");
-//			params15.put("timeout", "50");
-//			Object result15 = lib.getDriver().executeScript("mobile:checkpoint:text", params15);
-//			lib.addStep("trans_3", "Sign Out", lib.getUXTimer());
-			
-			// Back to search
-//			lib.clickElement(byFields.xpath, lib.getProp(prop.appSearchClear), 10);
 			// uninstall Telstra
 			try {
 				//lib.switchToContext(availableContexts.NATIVE_APP);   // Switch to NATIVE
