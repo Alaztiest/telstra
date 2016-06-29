@@ -62,7 +62,7 @@ public class AppStoreTestSystem extends ClassHelper {
         	
         	// launch appstore 
         	lib.goToPage("https://itunes.apple.com/us/app/whatsapp-messenger/id310633997?mt=8");
-        	
+        	//added from my Mac
 			Map<String, Object> params12 = new HashMap<>();
 			params12.put("content", "whatsapp");
 			params12.put("timeout", "60");
