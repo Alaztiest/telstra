@@ -75,7 +75,7 @@ public class AppStoreTestSystem extends ClassHelper {
         				
 			//appDownload
 			lib.clickElement(byFields.xpath, lib.getProp(prop.appDownload), 60);
-			
+
 			getCollector().setSla(320000); //update SLA seconds 
 			
 			Map<String, Object> params11 = new HashMap<>();
