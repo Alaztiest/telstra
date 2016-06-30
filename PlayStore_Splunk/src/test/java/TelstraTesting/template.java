@@ -29,7 +29,7 @@ import utilities.library.availableContexts;
 import utilities.library.byFields;
 import utilities.library.prop;
 
-public class PlayStoreTestSystem extends ClassHelper {
+public class changeMe extends ClassHelper {
 	private androidHelper android;
 
 
