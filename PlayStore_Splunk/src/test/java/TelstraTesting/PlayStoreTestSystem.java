@@ -75,10 +75,10 @@ public class PlayStoreTestSystem extends ClassHelper {
 			lib.clickElement(byFields.xpath, lib.getProp(prop.PSListApps), 10);
 			
 			getCollector().setSla(20000); //update SLA seconds 
-        	getCollector().setSla(60);
 			Map<String, Object> params12 = new HashMap<>();
 			params12.put("content", "Install");
 			params12.put("timeout", "60");
+			params12.put("measurement", "accurate");
 			Object result12 = lib.getDriver().executeScript("mobile:checkpoint:text", params12);
 			lib.addStep("trans_1", "App Search", lib.getUXTimer());
 			
@@ -94,16 +94,12 @@ public class PlayStoreTestSystem extends ClassHelper {
 			lib.addStep("trans_2", "Download", lib.getUXTimer());
 			
 			lib.clickElement(byFields.xpath, lib.getProp(prop.PSlaunchBtn), 10);
-
-			Map<String, Object> params10 = new HashMap<>();
-			params10.put("content", "Aggree and continue");
-			params10.put("timeout", "40");
-			Object result10 = lib.getDriver().executeScript("mobile:checkpoint:text", params10);
-
+//TESTING WITH TONY
 			getCollector().setSla(20000); //update SLA seconds
 			Map<String, Object> params15 = new HashMap<>();
 			params15.put("content", "Welcome to WhatsApp");
 			params15.put("timeout", "50");
+			params15.put("measurement", "accurate");
 			Object result15 = lib.getDriver().executeScript("mobile:checkpoint:text", params15);
 			lib.addStep("trans_3", "App Launched", lib.getUXTimer());
 			
