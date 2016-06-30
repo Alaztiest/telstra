@@ -3,4 +3,4 @@
 /test-output/
 /surefire-reports/
 /.classpath
-src/test/java/ClassHelper.java
+/src/test/java/utilities/ClassHelper.java
