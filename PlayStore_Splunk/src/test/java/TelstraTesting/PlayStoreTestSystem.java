@@ -95,6 +95,7 @@ public class PlayStoreTestSystem extends ClassHelper {
 			
 			lib.clickElement(byFields.xpath, lib.getProp(prop.PSlaunchBtn), 10);
 //TESTING WITH TONY
+//I HAVE ADDED THIS FROM MY LOCAL MACHINE WHILE WORKING WITH TONY			
 			getCollector().setSla(20000); //update SLA seconds
 			Map<String, Object> params15 = new HashMap<>();
 			params15.put("content", "Welcome to WhatsApp");
