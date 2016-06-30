@@ -63,6 +63,8 @@ public class AppStoreTestSystem extends ClassHelper {
         	// launch appstore 
         	lib.goToPage("https://itunes.apple.com/us/app/whatsapp-messenger/id310633997?mt=8");
 
+        	getCollector().setSla(20000); //update SLA seconds 
+        	
 			Map<String, Object> params12 = new HashMap<>();
 			params12.put("content", "whatsapp");
 			params12.put("timeout", "60");
@@ -74,6 +76,8 @@ public class AppStoreTestSystem extends ClassHelper {
 			//appDownload
 			lib.clickElement(byFields.xpath, lib.getProp(prop.appDownload), 60);
 			
+			getCollector().setSla(320000); //update SLA seconds 
+			
 			Map<String, Object> params11 = new HashMap<>();
 			params11.put("content", "Open");
 			params11.put("timeout", "420");
@@ -83,7 +87,8 @@ public class AppStoreTestSystem extends ClassHelper {
 			
 			//open verify: 
 			lib.clickElement(byFields.xpath, lib.getProp(prop.appOpen), 10);
-
+			
+			getCollector().setSla(20000); //update SLA seconds 
 			Map<String, Object> params13 = new HashMap<>();
 			params13.put("content", "Agree & Continue");
 			params13.put("timeout", "60");

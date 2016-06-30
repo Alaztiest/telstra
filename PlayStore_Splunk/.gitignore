@@ -2,3 +2,5 @@
 /splunky/surefire-reports
 /test-output/
 /surefire-reports/
+/.classpath
+src/test/java/ClassHelper.java

@@ -74,6 +74,8 @@ public class PlayStoreTestSystem extends ClassHelper {
 			
 			lib.clickElement(byFields.xpath, lib.getProp(prop.PSListApps), 10);
 			
+			getCollector().setSla(20000); //update SLA seconds 
+        	getCollector().setSla(60);
 			Map<String, Object> params12 = new HashMap<>();
 			params12.put("content", "Install");
 			params12.put("timeout", "60");
@@ -81,6 +83,8 @@ public class PlayStoreTestSystem extends ClassHelper {
 			lib.addStep("trans_1", "App Search", lib.getUXTimer());
 			
 			lib.clickElement(byFields.xpath, lib.getProp(prop.PSclickInstall), 10);
+			
+			getCollector().setSla(320000); //update SLA seconds 
 			Map<String, Object> params11 = new HashMap<>();
 			params11.put("content", "Uninstall");
 			params11.put("timeout", "420");
@@ -96,6 +100,7 @@ public class PlayStoreTestSystem extends ClassHelper {
 			params10.put("timeout", "40");
 			Object result10 = lib.getDriver().executeScript("mobile:checkpoint:text", params10);
 
+			getCollector().setSla(20000); //update SLA seconds
 			Map<String, Object> params15 = new HashMap<>();
 			params15.put("content", "Welcome to WhatsApp");
 			params15.put("timeout", "50");
