@@ -49,7 +49,7 @@ public class aTelstra2TestSystem extends ClassHelper {
         	
         	//launch Telstra 24x7
         	lib.clickElement(byFields.xpath, lib.getProp(prop.aAppListPick), 10);
-        	//getCollector().setSla(60000);
+        	getCollector().setSla(60000);
         	Map<String, Object> appLaunch = new HashMap<>();
         	appLaunch.put("content", "Register");
         	appLaunch.put("timeout", "180");
@@ -62,7 +62,7 @@ public class aTelstra2TestSystem extends ClassHelper {
         	// verify My usage
         	lib.clickElement(byFields.xpath, lib.getProp(prop.aMainMenu), 10);
         	lib.clickElement(byFields.xpath, lib.getProp(prop.aMyUsage), 10);
-        	//getCollector().setSla(60000);
+        	getCollector().setSla(60000);
         	Map<String, Object> myUsage = new HashMap<>();
         	myUsage.put("content", "Register");
         	myUsage.put("timeout", "180");
@@ -74,7 +74,7 @@ public class aTelstra2TestSystem extends ClassHelper {
         	lib.clickElement(byFields.xpath, lib.getProp(prop.aMainMenu), 10);
         	lib.clickElement(byFields.xpath, lib.getProp(prop.aMyBill), 10);
         	
-        	//getCollector().setSla(60000);
+        	getCollector().setSla(60000);
         	Map<String, Object> myBill = new HashMap<>();
         	myBill.put("content", "Register");
         	myBill.put("timeout", "180");
