@@ -16,7 +16,7 @@
     </classes>
   </test>
   
-  <test name="Galaxy S7 Pair-2">
+  <test name="Galaxy S6 Pair-2">
   <parameter name="targetEnvironment" value="Galaxy S7" />
   <parameter name="network" value="WIFI" />
   <parameter name="networkLatency" value="" />
