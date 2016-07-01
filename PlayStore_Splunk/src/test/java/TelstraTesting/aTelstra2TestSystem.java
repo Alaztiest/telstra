@@ -83,7 +83,6 @@ public class aTelstra2TestSystem extends ClassHelper {
         	lib.addStep("trans_3", "My Bill", lib.getUXTimer());
         	
         	lib.clickElement(byFields.xpath, lib.getProp(prop.aMainMenu), 10);
-        	lib.addStep("trans_3", "TRAN_3", lib.getUXTimer());
         	
         	// clean app
 //        	Map<String, Object> params13 = new HashMap<>();
