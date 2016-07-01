@@ -35,7 +35,7 @@ public class template extends ClassHelper {
 
 	public void setPagesAndHelpers(library lib) throws IOException {
 		
-		lib.loadPropertyFile("PSElements.properties"); //Update based on your properties file
+		lib.loadPropertyFile("PSElements.properties"); // -Update based on your properties file
 	}
 
 	
