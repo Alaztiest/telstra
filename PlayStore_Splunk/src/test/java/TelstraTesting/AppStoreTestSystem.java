@@ -38,8 +38,7 @@ public class AppStoreTestSystem extends ClassHelper {
 		
 		lib.loadPropertyFile("TelstraElements.properties");
 	}
-
-	//test
+//from Tonys local machin
 	@Test
 	public void Login() throws Exception {
 		try {
