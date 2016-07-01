@@ -39,7 +39,7 @@ public class AppStoreTestSystem extends ClassHelper {
 		lib.loadPropertyFile("TelstraElements.properties");
 	}
 
-	
+	//test
 	@Test
 	public void Login() throws Exception {
 		try {
