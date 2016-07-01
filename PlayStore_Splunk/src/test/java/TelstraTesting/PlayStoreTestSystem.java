@@ -38,7 +38,7 @@ public class PlayStoreTestSystem extends ClassHelper {
 		lib.loadPropertyFile("PSElements.properties");
 	}
 
-	
+	// this is comment from VM machine
 	@Test
 	public void Login() throws Exception {
 		try {
