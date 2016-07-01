@@ -80,7 +80,7 @@ public class PlayStoreTestSystem extends ClassHelper {
 			params12.put("timeout", "60");
 			params12.put("measurement", "accurate");
 			Object result12 = lib.getDriver().executeScript("mobile:checkpoint:text", params12);
-			lib.addStep("trans_1", "App Search", lib.getUXTimer());
+			lib.addStep("trans_1", "WhatsApp Search", lib.getUXTimer());
 			
 			lib.clickElement(byFields.xpath, lib.getProp(prop.PSclickInstall), 10);
 			

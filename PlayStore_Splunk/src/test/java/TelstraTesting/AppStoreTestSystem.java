@@ -68,7 +68,7 @@ public class AppStoreTestSystem extends ClassHelper {
 			params12.put("content", "whatsapp");
 			params12.put("timeout", "60");
 			Object result12 = lib.getDriver().executeScript("mobile:checkpoint:text", params12);
-			lib.addStep("trans_1", "App Search", lib.getUXTimer());
+			lib.addStep("trans_1", "WhatsApp Search", lib.getUXTimer());
         	
         	lib.switchToContext(availableContexts.NATIVE_APP);   // Switch to NATIVE
         				

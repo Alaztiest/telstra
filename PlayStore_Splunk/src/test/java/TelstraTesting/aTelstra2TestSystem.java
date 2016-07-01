@@ -55,7 +55,7 @@ public class aTelstra2TestSystem extends ClassHelper {
         	appLaunch.put("timeout", "180");
         	appLaunch.put("measurement", "accurate");
         	Object resultAppLaunch = lib.getDriver().executeScript("mobile:checkpoint:text", appLaunch);
-        	lib.addStep("trans_1", "App Launch", lib.getUXTimer());
+        	lib.addStep("trans_1", "Telstra24x7 Launch", lib.getUXTimer());
         	
         	//lib.sleep(50000);
   

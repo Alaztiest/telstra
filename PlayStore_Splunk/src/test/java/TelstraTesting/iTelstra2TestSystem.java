@@ -46,24 +46,7 @@ public class iTelstra2TestSystem extends ClassHelper {
 			setPagesAndHelpers(lib);
 			Map<String, Object> params1 = new HashMap<>();
         	Object result1 = lib.getDriver().executeScript("mobile:handset:ready", params1);
-//			Map<String, Object> params17 = new HashMap<>();
-//			params17.put("property", "os");
-//			String result17 = (String)lib.getDriver().executeScript("mobile:handset:info", params17);
-//			
-			
-//        	try {
-//        		lib.closeApplication("App Store");
-//        		
-//        		Map<String, Object> params16 = new HashMap<>();
-//    			params16.put("name", "Telstra 24x7");
-//    			Object result16 =lib.getDriver().executeScript("mobile:application:uninstall", params16);
-//    			System.out.println("---------- App Uninstalled +++");
-//    		} catch (Exception ex) {
-//    			// TODO Auto-generated catch block
-//    			ex.printStackTrace();
-//    			System.out.println("----------Error App Uninstall+++");	
-//    		}
-        	
+
         	
         	// launch appstore 
         	Map<String, Object> params10 = new HashMap<>();
@@ -77,7 +60,7 @@ public class iTelstra2TestSystem extends ClassHelper {
         	appLaunch.put("timeout", "180");
         	appLaunch.put("measurement", "accurate");
         	Object resultAppLaunch = lib.getDriver().executeScript("mobile:checkpoint:text", appLaunch);
-        	lib.addStep("trans_1", "App Launch", lib.getUXTimer());
+        	lib.addStep("trans_1", "Telstra24x7 Launch", lib.getUXTimer());
         	
         	lib.switchToContext(availableContexts.NATIVE_APP);   // Switch to NATIVE
 
