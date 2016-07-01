@@ -12,17 +12,16 @@
   <parameter name="network" value="WIFI" />
   <parameter name="networkLatency" value="" />
     <classes>
-      <class name="TelstraTesting.PlayStoreTestSystem"/>
+      <class name="TelstraTesting.aTelstra2TestSystem"/>
     </classes>
   </test>
   
-       
- <test name="iPhone-6 Pair-2">
-  <parameter name="targetEnvironment" value="iPhone-6" />
+  <test name="Galaxy S7 Pair-2">
+  <parameter name="targetEnvironment" value="Galaxy S7" />
   <parameter name="network" value="WIFI" />
   <parameter name="networkLatency" value="" />
     <classes>
-      <class name="TelstraTesting.PlayStoreTestSystem"/>
+      <class name="TelstraTesting.aTelstra2TestSystem"/>
     </classes>
-  </test>  
+  </test>
 </suite> <!-- Suite -->

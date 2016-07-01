@@ -7,22 +7,21 @@
        <listener class-name="utilities.TestListener" />
   </listeners>
       
- <test name="Galaxy S6 Pair-1">
-  <parameter name="targetEnvironment" value="Galaxy S6" />
+ <test name="iPhone-6S Pair-1">
+  <parameter name="targetEnvironment" value="iPhone-6S" />
   <parameter name="network" value="WIFI" />
   <parameter name="networkLatency" value="" />
     <classes>
-      <class name="TelstraTesting.PlayStoreTestSystem"/>
-    </classes>
-  </test>
-  
-       
- <test name="iPhone-6 Pair-2">
-  <parameter name="targetEnvironment" value="iPhone-6" />
-  <parameter name="network" value="WIFI" />
-  <parameter name="networkLatency" value="" />
-    <classes>
-      <class name="TelstraTesting.PlayStoreTestSystem"/>
+      <class name="TelstraTesting.iTelstra2TestSystem"/>
     </classes>
   </test>  
+  
+   <test name="iPhone-6S Pair-2">
+  <parameter name="targetEnvironment" value="iPhone-6S" />
+  <parameter name="network" value="WIFI" />
+  <parameter name="networkLatency" value="" />
+    <classes>
+      <class name="TelstraTesting.iTelstra2TestSystem"/>
+    </classes>
+  </test>
 </suite> <!-- Suite -->
