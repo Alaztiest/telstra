@@ -35,7 +35,11 @@ public class template extends ClassHelper {
 
 	public void setPagesAndHelpers(library lib) throws IOException {
 		
+<<<<<<< HEAD
 		lib.loadPropertyFile("PSElements.properties"); // -Update based on your properties file
+=======
+		lib.loadPropertyFile("PSElements.properties"); // --Update based on your properties file
+>>>>>>> branch 'master' of https://github.com/vmelikyan/telstra.git
 	}
 
 	

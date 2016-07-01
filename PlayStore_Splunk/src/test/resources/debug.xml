@@ -22,7 +22,7 @@
   <parameter name="network" value="WIFI" />
   <parameter name="networkLatency" value="" />
     <classes>
-      <class name="TelstraTesting.PlayStoreTestSystem"/>
+      <class name="TelstraTesting.AppStoreTestSystem"/>
     </classes>
   </test>  
 </suite> <!-- Suite -->
