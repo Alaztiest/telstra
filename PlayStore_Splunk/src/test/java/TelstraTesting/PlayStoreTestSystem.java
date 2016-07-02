@@ -78,7 +78,9 @@ public class PlayStoreTestSystem extends ClassHelper {
 			Map<String, Object> params12 = new HashMap<>();
 			params12.put("content", "Install");
 			params12.put("timeout", "60");
+			params12.put("threshold", "90");
 			params12.put("measurement", "accurate");
+			params12.put("source", "camera");
 			Object result12 = lib.getDriver().executeScript("mobile:checkpoint:text", params12);
 			lib.addStep("trans_1", "WhatsApp Search", lib.getUXTimer());
 			
@@ -90,6 +92,7 @@ public class PlayStoreTestSystem extends ClassHelper {
 			params11.put("timeout", "420");
 			params11.put("threshold", "95");
 			params11.put("measurement", "accurate");
+			params11.put("source", "camera");
 			Object result11 = lib.getDriver().executeScript("mobile:checkpoint:text", params11);
 			lib.addStep("trans_2", "Download", lib.getUXTimer());
 			
@@ -99,7 +102,9 @@ public class PlayStoreTestSystem extends ClassHelper {
 			Map<String, Object> params15 = new HashMap<>();
 			params15.put("content", "Welcome to WhatsApp");
 			params15.put("timeout", "50");
+			params15.put("threshold", "90");
 			params15.put("measurement", "accurate");
+			params15.put("source", "camera");
 			Object result15 = lib.getDriver().executeScript("mobile:checkpoint:text", params15);
 			lib.addStep("trans_3", "App Launched", lib.getUXTimer());
 			

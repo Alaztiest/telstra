@@ -67,6 +67,8 @@ public class AppStoreTestSystem extends ClassHelper {
 			Map<String, Object> params12 = new HashMap<>();
 			params12.put("content", "whatsapp");
 			params12.put("timeout", "60");
+			params12.put("measurement", "accurate");
+			params12.put("source", "camera");
 			Object result12 = lib.getDriver().executeScript("mobile:checkpoint:text", params12);
 			lib.addStep("trans_1", "WhatsApp Search", lib.getUXTimer());
         	
@@ -80,6 +82,8 @@ public class AppStoreTestSystem extends ClassHelper {
 			Map<String, Object> params11 = new HashMap<>();
 			params11.put("content", "Open");
 			params11.put("timeout", "420");
+			params11.put("measurement", "accurate");
+			params11.put("source", "camera");
 			Object result11 = lib.getDriver().executeScript("mobile:checkpoint:text", params11);
 			lib.addStep("trans_2", "Download", lib.getUXTimer());
 			System.out.println("----------Open btn displayed +++");
@@ -91,6 +95,8 @@ public class AppStoreTestSystem extends ClassHelper {
 			Map<String, Object> params13 = new HashMap<>();
 			params13.put("content", "Agree & Continue");
 			params13.put("timeout", "60");
+			params13.put("measurement", "accurate");
+			params13.put("source", "camera");
 			Object result13 = lib.getDriver().executeScript("mobile:checkpoint:text", params13);
 			lib.addStep("trans_3", "App Launched", lib.getUXTimer());
 			

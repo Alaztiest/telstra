@@ -42,7 +42,7 @@ public abstract class ClassHelper {
 	// Splunk password
 	// Some comment here
 	public void setSplunk() {
-		SplunkReportingCollector reporting = ReportingCollectorFactory.createInstance(200000, "localhost", 8089, "admin",
+		SplunkReportingCollector reporting = ReportingCollectorFactory.createInstance(200000, "52.204.229.203", 8089, "admin",
 				"Hova8584");
 		ReportingCollectorFactory.setReporting(reporting);
 	}

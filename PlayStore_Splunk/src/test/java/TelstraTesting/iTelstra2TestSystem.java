@@ -58,7 +58,9 @@ public class iTelstra2TestSystem extends ClassHelper {
         	Map<String, Object> appLaunch = new HashMap<>();
         	appLaunch.put("content", "Register");
         	appLaunch.put("timeout", "180");
+        	appLaunch.put("threshold", "90");
         	appLaunch.put("measurement", "accurate");
+        	appLaunch.put("source", "camera");
         	Object resultAppLaunch = lib.getDriver().executeScript("mobile:checkpoint:text", appLaunch);
         	lib.addStep("trans_1", "Telstra24x7 Launch", lib.getUXTimer());
         	
@@ -72,7 +74,9 @@ public class iTelstra2TestSystem extends ClassHelper {
         	Map<String, Object> myUsage = new HashMap<>();
         	myUsage.put("content", "Register");
         	myUsage.put("timeout", "180");
+        	myUsage.put("threshold", "90");
         	myUsage.put("measurement", "accurate");
+        	myUsage.put("source", "camera");
         	Object resultMyUsage = lib.getDriver().executeScript("mobile:checkpoint:text", myUsage);
         	lib.addStep("trans_2", "My Usage", lib.getUXTimer());
         	
@@ -83,7 +87,9 @@ public class iTelstra2TestSystem extends ClassHelper {
         	Map<String, Object> myBill = new HashMap<>();
         	myBill.put("content", "Register");
         	myBill.put("timeout", "180");
+        	myBill.put("threshold", "90");
         	myBill.put("measurement", "accurate");
+        	myBill.put("source", "camera");
         	Object resultMyBill = lib.getDriver().executeScript("mobile:checkpoint:text", myBill);
         	lib.addStep("trans_3", "My Bill", lib.getUXTimer());
         	
