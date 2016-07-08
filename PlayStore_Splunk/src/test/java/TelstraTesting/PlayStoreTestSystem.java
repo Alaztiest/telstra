@@ -75,6 +75,7 @@ public class PlayStoreTestSystem extends ClassHelper {
 			lib.clickElement(byFields.xpath, lib.getProp(prop.PSListApps), 10);
 			
 			getCollector().setSla(20000); //update SLA seconds 
+			lib.StartTransaction("trans_1", "WhatsApp Search");
 			Map<String, Object> params12 = new HashMap<>();
 			params12.put("content", "Install");
 			params12.put("timeout", "60");
@@ -82,11 +83,14 @@ public class PlayStoreTestSystem extends ClassHelper {
 			params12.put("measurement", "accurate");
 			params12.put("source", "camera");
 			Object result12 = lib.getDriver().executeScript("mobile:checkpoint:text", params12);
-			lib.addStep("trans_1", "WhatsApp Search", lib.getUXTimer());
+			lib.EndTransaction("trans_1", "WhatsApp Search");
+			
+			//lib.addStep("trans_1", "WhatsApp Search", lib.getUXTimer());
 			
 			lib.clickElement(byFields.xpath, lib.getProp(prop.PSclickInstall), 10);
 			
 			getCollector().setSla(320000); //update SLA seconds 
+			lib.StartTransaction("trans_2", "Download");
 			Map<String, Object> params11 = new HashMap<>();
 			params11.put("content", "Uninstall");
 			params11.put("timeout", "420");
@@ -94,11 +98,14 @@ public class PlayStoreTestSystem extends ClassHelper {
 			params11.put("measurement", "accurate");
 			params11.put("source", "camera");
 			Object result11 = lib.getDriver().executeScript("mobile:checkpoint:text", params11);
-			lib.addStep("trans_2", "Download", lib.getUXTimer());
+			lib.EndTransaction("trans_2", "Download");
+			
+			//lib.addStep("trans_2", "Download", lib.getUXTimer());
 			
 			lib.clickElement(byFields.xpath, lib.getProp(prop.PSlaunchBtn), 10);
 		
 			getCollector().setSla(20000); //update SLA seconds
+			lib.StartTransaction("trans_3", "App Launched");
 			Map<String, Object> params15 = new HashMap<>();
 			params15.put("content", "Welcome to WhatsApp");
 			params15.put("timeout", "50");
@@ -106,7 +113,10 @@ public class PlayStoreTestSystem extends ClassHelper {
 			params15.put("measurement", "accurate");
 			params15.put("source", "camera");
 			Object result15 = lib.getDriver().executeScript("mobile:checkpoint:text", params15);
-			lib.addStep("trans_3", "App Launched", lib.getUXTimer());
+			lib.EndTransaction("trans_3", "App Launched");
+			
+			
+			//lib.addStep("trans_3", "App Launched", lib.getUXTimer());
 			
 			try {
 				lib.closeApplication("com.android.vending");

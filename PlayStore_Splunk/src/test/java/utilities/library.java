@@ -290,12 +290,19 @@ public class library {
 		return result;
 	}
 	
-	public void addStep(String stepDesc1, String stepDesc2, long time)
+	public void StartTransaction(String stepDesc1, String stepDesc2)
 	{		
-		WindTunnelUtils.pointOfInterest(driver, stepDesc1 + ":" + stepDesc2, "SUCCESS");
-		ReportingCollectorFactory.getCollector().setStepDetails(stepDesc1, stepDesc2, time);
-	}
 
+		ReportingCollectorFactory.getCollector().startTransaction(stepDesc1, stepDesc2);
+		}
+
+	public void EndTransaction(String stepDesc1, String stepDesc2) throws Exception
+	{	
+		ReportingCollectorFactory.getCollector().endTransaction(stepDesc1, getUXTimer());
+		WindTunnelUtils.pointOfInterest(driver, stepDesc1 + ":" + stepDesc2, "SUCCESS");
+		}
+	
+	
 	// returns ux timer
 	public long getUXTimer() {
 		return timerGet("ux");

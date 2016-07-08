@@ -63,14 +63,14 @@ public class AppStoreTestSystem extends ClassHelper {
         	lib.goToPage("https://itunes.apple.com/us/app/whatsapp-messenger/id310633997?mt=8");
 
         	getCollector().setSla(20000); //update SLA seconds 
-        	
+        	lib.StartTransaction("trans_1", "WhatsApp Search");
 			Map<String, Object> params12 = new HashMap<>();
 			params12.put("content", "whatsapp");
 			params12.put("timeout", "60");
 			params12.put("measurement", "accurate");
 			params12.put("source", "camera");
 			Object result12 = lib.getDriver().executeScript("mobile:checkpoint:text", params12);
-			lib.addStep("trans_1", "WhatsApp Search", lib.getUXTimer());
+			lib.EndTransaction("trans_1", "WhatsApp Search");
         	
         	lib.switchToContext(availableContexts.NATIVE_APP);   // Switch to NATIVE
         				
@@ -79,26 +79,34 @@ public class AppStoreTestSystem extends ClassHelper {
 
 			getCollector().setSla(320000); //update SLA seconds 
 			
+			lib.StartTransaction("trans_2", "Download");
 			Map<String, Object> params11 = new HashMap<>();
 			params11.put("content", "Open");
 			params11.put("timeout", "420");
 			params11.put("measurement", "accurate");
 			params11.put("source", "camera");
 			Object result11 = lib.getDriver().executeScript("mobile:checkpoint:text", params11);
-			lib.addStep("trans_2", "Download", lib.getUXTimer());
+			lib.EndTransaction("trans_2", "Download");
+			
+			
+			//lib.addStep("trans_2", "Download", lib.getUXTimer());
 			System.out.println("----------Open btn displayed +++");
 			
 			//open verify: 
 			lib.clickElement(byFields.xpath, lib.getProp(prop.appOpen), 10);
 			
+
 			getCollector().setSla(20000); //update SLA seconds 
+			lib.StartTransaction("trans_3", "App Launched");
 			Map<String, Object> params13 = new HashMap<>();
 			params13.put("content", "Agree & Continue");
 			params13.put("timeout", "60");
 			params13.put("measurement", "accurate");
 			params13.put("source", "camera");
 			Object result13 = lib.getDriver().executeScript("mobile:checkpoint:text", params13);
-			lib.addStep("trans_3", "App Launched", lib.getUXTimer());
+			lib.EndTransaction("trans_3", "App Launched");
+			
+			//lib.addStep("trans_3", "App Launched", lib.getUXTimer());
 			
 			System.out.println("----------Application Launched +++");
 

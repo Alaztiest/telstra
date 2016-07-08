@@ -55,6 +55,7 @@ public class iTelstra2TestSystem extends ClassHelper {
         	Object result10 = lib.getDriver().executeScript("mobile:application:open", params10);
         	
         	getCollector().setSla(60000);
+        	lib.StartTransaction("trans_1", "Telstra24x7 Launch");
         	Map<String, Object> appLaunch = new HashMap<>();
         	appLaunch.put("content", "Register");
         	appLaunch.put("timeout", "180");
@@ -62,7 +63,8 @@ public class iTelstra2TestSystem extends ClassHelper {
         	appLaunch.put("measurement", "accurate");
         	appLaunch.put("source", "camera");
         	Object resultAppLaunch = lib.getDriver().executeScript("mobile:checkpoint:text", appLaunch);
-        	lib.addStep("trans_1", "Telstra24x7 Launch", lib.getUXTimer());
+        	lib.EndTransaction("trans_1", "Telstra24x7 Launch");
+        	//lib.addStep("trans_1", "Telstra24x7 Launch", lib.getUXTimer());
         	
         	lib.switchToContext(availableContexts.NATIVE_APP);   // Switch to NATIVE
 
@@ -71,6 +73,7 @@ public class iTelstra2TestSystem extends ClassHelper {
         	lib.clickElement(byFields.xpath, lib.getProp(prop.myUsage), 10);
         	
         	getCollector().setSla(60000);
+        	lib.StartTransaction("trans_2", "My Usage");
         	Map<String, Object> myUsage = new HashMap<>();
         	myUsage.put("content", "Register");
         	myUsage.put("timeout", "180");
@@ -78,12 +81,15 @@ public class iTelstra2TestSystem extends ClassHelper {
         	myUsage.put("measurement", "accurate");
         	myUsage.put("source", "camera");
         	Object resultMyUsage = lib.getDriver().executeScript("mobile:checkpoint:text", myUsage);
-        	lib.addStep("trans_2", "My Usage", lib.getUXTimer());
+        	lib.EndTransaction("trans_2", "My Usage");
+        	
+        	//lib.addStep("trans_2", "My Usage", lib.getUXTimer());
         	
         	lib.clickElement(byFields.xpath, lib.getProp(prop.mainMenu), 10);
         	lib.clickElement(byFields.xpath, lib.getProp(prop.myBill), 10);
         	
         	getCollector().setSla(60000);
+        	lib.StartTransaction("trans_3", "My Bill");
         	Map<String, Object> myBill = new HashMap<>();
         	myBill.put("content", "Register");
         	myBill.put("timeout", "180");
@@ -91,7 +97,9 @@ public class iTelstra2TestSystem extends ClassHelper {
         	myBill.put("measurement", "accurate");
         	myBill.put("source", "camera");
         	Object resultMyBill = lib.getDriver().executeScript("mobile:checkpoint:text", myBill);
-        	lib.addStep("trans_3", "My Bill", lib.getUXTimer());
+        	lib.EndTransaction("trans_3", "My Bill");
+        	
+        	//lib.addStep("trans_3", "My Bill", lib.getUXTimer());
         	
         	lib.clickElement(byFields.xpath, lib.getProp(prop.mainMenu), 10);
 
