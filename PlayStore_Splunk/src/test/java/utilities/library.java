@@ -57,7 +57,7 @@ public class library {
 	}
 
 	public enum prop {
-		appSearchClear, PlayStoreLaunch, PSclickSearch,PSreadyText,PSfindList,PSListApps,PSclickInstall,PSlaunchBtn,appDownload,appOpen,mainMenu, myUsage, myBill,aAppListPick, aMainMenu, aMyUsage, aMyBill
+		appSearchClear, PlayStoreLaunch, PSclickSearch,PSreadyText,PSfindList,PSListApps,PSclickInstall,PSlaunchBtn,appDownload,appOpen,mainMenu, myRecharge, myBill,aAppListPick, aMainMenu, aMyUsage, aMyBill
 	}
 
 	public library(RemoteWebDriver driver, String target, int step, String network, String networkLatency) {
