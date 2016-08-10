@@ -44,7 +44,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>sample</groupId>
-			<artifactId>com.sample</artifactId>
+			<artifactId>com.perfecto</artifactId>
 			<version>1.0</version>
 			<scope>system</scope>
 			<systemPath>${project.basedir}/src/test/resources/PerfectoSplunk.jar</systemPath>
