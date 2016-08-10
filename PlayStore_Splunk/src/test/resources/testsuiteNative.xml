@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="2" verbose="1" configfailurepolicy="skip">
+ <listeners>
+	  <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+       <listener class-name="utilities.TestListenerNative" />
+  </listeners>
+
+  <test name="NativeTestiOS">
+  <parameter name="host" value="demo.perfectomobile.com" />
+   <parameter name="username" value="vahanm@perfectomobile.com" />
+   <parameter name="password" value="Hova8584" />
+   <parameter name="scriptKey" value="Public:/Telstra/NetflixChecker" />
+   <parameter name="deviceId" value="EBB620E023B3FA0A72CAF31B46A21A51213C590E" />     
+    <classes>
+      <class name="TelstraTesting.NativeRunner">
+    	</class>
+    </classes>   
+  </test>
+  
+</suite> <!-- Suite -->

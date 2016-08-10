@@ -158,6 +158,15 @@ public class testSetup {
 			capabilities.setCapability("automationName", "Appium");
 			capabilities.setCapability("description", "TelstraPOC");
 			break;
+		case "iPhone-5":
+			device = true;
+			capabilities.setCapability("deviceName", "EBB620E023B3FA0A72CAF31B46A21A51213C590E");
+			capabilities.setCapability("platformName", "iOS");
+			capabilities.setCapability("model", "iPhone-5");
+			capabilities.setCapability("browserName", "");
+			capabilities.setCapability("automationName", "Appium");
+			//capabilities.setCapability("description", "TelstraPOC");
+			break;
 			/*
 		case "Galaxy Tab":
 			device = true;

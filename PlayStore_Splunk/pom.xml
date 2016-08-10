@@ -48,6 +48,13 @@
 			<version>1.0</version>
 			<scope>system</scope>
 			<systemPath>${project.basedir}/src/test/resources/PerfectoSplunk.jar</systemPath>
+		</dependency>	
+		<dependency>
+			<groupId>sample</groupId>
+			<artifactId>com.sample</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/src/test/resources/PerfectoNativeRunner.jar</systemPath>
 		</dependency>		
 		<dependency>
 			<groupId>org.uncommons</groupId>

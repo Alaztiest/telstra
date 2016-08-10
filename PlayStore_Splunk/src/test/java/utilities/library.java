@@ -57,7 +57,7 @@ public class library {
 	}
 
 	public enum prop {
-		appSearchClear, PlayStoreLaunch, PSclickSearch,PSreadyText,PSfindList,PSListApps,PSclickInstall,PSlaunchBtn,appDownload,appOpen,mainMenu, myRecharge, myBill,aAppListPick, aMainMenu, aMyUsage, aMyBill
+		appSearchClear, PlayStoreLaunch, PSclickSearch,PSreadyText,PSfindList,PSListApps,PSclickInstall,PSlaunchBtn,appDownload,appOpen,mainMenu, myRecharge, myBill,aAppListPick, aMainMenu, aMyUsage, aMyBill, playPopular, playButton, AplayButton, pauseBtn, remainingTime,
 	}
 
 	public library(RemoteWebDriver driver, String target, int step, String network, String networkLatency) {
@@ -306,6 +306,13 @@ public class library {
 	// returns ux timer
 	public long getUXTimer() {
 		return timerGet("ux");
+	}
+	public long getDeviceTimer() {
+		return timerGet("device");
+	}
+
+	public long getSystemTimer() {
+		return getUXTimer()+getDeviceTimer();
 	}
 
 	public void takeScreen(String text, Boolean addReport) {
