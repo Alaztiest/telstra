@@ -11,8 +11,8 @@
   <parameter name="host" value="demo.perfectomobile.com" />
    <parameter name="username" value="vahanm@perfectomobile.com" />
    <parameter name="password" value="Hova8584" />
-   <parameter name="scriptKey" value="Public:/Telstra/NetflixChecker" />
-   <parameter name="deviceId" value="EBB620E023B3FA0A72CAF31B46A21A51213C590E" />     
+   <parameter name="scriptKey" value="Public:/Telstra/NetflixChecker_iOS" />
+   <parameter name="deviceId" value="AC1D0525807CE575C2F41C9D70C8194F10F07462" />     
     <classes>
       <class name="TelstraTesting.NativeRunner">
     	</class>
