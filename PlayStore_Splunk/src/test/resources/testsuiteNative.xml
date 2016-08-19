@@ -12,7 +12,7 @@
    <parameter name="username" value="vahanm@perfectomobile.com" />
    <parameter name="password" value="Hova8584" />
    <parameter name="scriptKey" value="Public:/Telstra/NetflixChecker_iOS" />
-   <parameter name="deviceId" value="AC1D0525807CE575C2F41C9D70C8194F10F07462" />     
+   <parameter name="deviceId" value="7F24A2D36D1217B0881C639273BF9E94715068D2" />     
     <classes>
       <class name="TelstraTesting.NativeRunner">
     	</class>
